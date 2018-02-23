@@ -9,8 +9,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/public');
 
 app.get('/', function(request, response) {
-  var env = process.env.APP_ENV;
-  env = NODE_ENV;
+  var env = process.env.NODE_ENV;
   if (env == 'staging') {
     var envName = 'staging'
   } else if (env == 'production') {
